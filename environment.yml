@@ -1,0 +1,22 @@
+# Versions of the study and of the verification run (see requirements-lock.txt).
+name: urban-block-morphology
+channels: [conda-forge]
+dependencies:
+  - python=3.12
+  - momepy=1.0.0
+  - libpysal=4.15
+  - geopandas=1.1
+  - shapely=2.1
+  - pyogrio
+  - pyproj
+  - pandas=2.3
+  - numpy=2.2
+  - scipy=1.16
+  - scikit-learn=1.7.2
+  - kneed=0.8.5
+  - osmnx=2.1
+  - pyyaml
+  - pyarrow
+  - pip
+  - pip:
+      - -e .

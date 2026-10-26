@@ -1,0 +1,3 @@
+[submodule "packages/building-typology-rcnn"]
+	path = packages/building-typology-rcnn
+	url = https://github.com/cdml-lab/building-typology-rcnn.git

@@ -1,0 +1,28 @@
+# Small runnable example: three sub-areas of the study's Cities A-C.
+# Run:  blockmorph run examples/example_config.yaml
+crs: auto                 # UTM zone estimated from the areas (or e.g. EPSG:2039)
+descriptors: full57       # full57 = manuscript model; morphometric46 = no typology input
+output_dir: example_output
+analysis: {local: true, pooled: true}
+parameters:
+  stability_reps: 10      # study: 100; fewer here to keep the example quick
+areas:
+  - id: A
+    name: City A
+    boundary: data/A/boundary.gpkg
+    buildings: data/A/buildings.gpkg
+    streets: data/A/streets.gpkg
+    typology_predictions: data/A/typology_predictions.gpkg
+  - id: B
+    name: City B
+    boundary: data/B/boundary.gpkg
+    buildings: data/B/buildings.gpkg
+    streets: data/B/streets.gpkg
+    typology_predictions: data/B/typology_predictions.gpkg
+  - id: C
+    name: City C
+    boundary: data/C/boundary.gpkg
+    buildings: data/C/buildings.gpkg
+    streets: data/C/streets.gpkg
+    cut_all_roads: true   # every mapped way cuts blocks (study rule for City C)
+    typology_predictions: data/C/typology_predictions.gpkg

@@ -1,0 +1,58 @@
+column,group,unit,definition
+blk_area,block shape,m2,Block polygon area
+blk_perimeter,block shape,m,Block polygon perimeter
+blk_compactness,block shape,0-1,Circular compactness of the block (momepy.circular_compactness)
+blk_eri,block shape,ratio,Equivalent rectangular index of the block (momepy)
+blk_orientation,block shape,deg 0-45,Orientation of the block's minimum rotated rectangle (momepy)
+n_buildings,intensity,count,Buildings in the block (placed by representative point)
+blg_density_ha,intensity,1/ha,Buildings per hectare of block
+gsi,intensity,0-1,Ground space index: building footprint / block area
+fsi,intensity,ratio,Floor space index: floor area / block area (floor area = footprint x floors)
+height_mean,height,m,Mean building height (after imputation)
+height_std,height,m,Standard deviation of building height
+height_max,height,m,Maximum building height
+volume_sum,height,m3,Total building volume (footprint x height)
+volume_density,height,m3/m2,Building volume / block area
+height_wmean,height,m,Footprint-weighted mean building height
+height_p90,height,m,90th percentile of building height
+height_cv,height,ratio,Coefficient of variation of building height
+slenderness_mean,height,ratio,Mean of height / sqrt(footprint)
+slenderness_max,height,ratio,Maximum of height / sqrt(footprint)
+osr,intensity,ratio,Open space ratio (1 - GSI) / FSI
+layers_mean,intensity,floors,FSI / GSI (mean number of storeys)
+bulk_density,height,m3/m2,Sum of height x floor area / block area
+blg_area_mean,grain,m2,Mean building footprint
+blg_area_std,grain,m2,Standard deviation of building footprint
+elongation_mean,grain,0-1,Mean building elongation (momepy)
+eri_mean,grain,ratio,Mean equivalent rectangular index of buildings
+car_mean,grain,0-1,Mean coverage area ratio: footprint / enclosed-tessellation cell
+dist_to_street_mean,configuration,m,Mean distance from building to its nearest street (search radius 120 m)
+shared_walls_mean,configuration,0-1,Mean share of building perimeter shared with other buildings
+courtyards_per_blg,configuration,count,Courtyards (momepy) per building
+neighbor_dist_mean,configuration,m,Mean distance to the 5 nearest buildings (momepy.neighbor_distance)
+alignment_mean,configuration,deg,Mean orientation deviation from the 5 nearest buildings
+street_alignment_mean,configuration,deg,Mean orientation deviation from the nearest street
+adjacency_mean,configuration,0-1,Mean building adjacency (momepy.building_adjacency)
+edge_building_share,configuration,0-1,Share of buildings whose centroid lies within 15 m of the block edge
+dist_to_edge_norm_mean,configuration,ratio,Mean centroid distance to block edge / equivalent-circle radius of the block
+rcnn_carpet_houses,building typology,0-1,Share of classified buildings predicted Carpet Houses (NaN if none classified)
+rcnn_geometric_building,building typology,0-1,Share predicted Geometric Building (NaN if none classified)
+rcnn_geometric_shape,building typology,0-1,Share predicted Geometric Shape (NaN if none classified)
+rcnn_h_shape,building typology,0-1,Share predicted H Shape incl. network class Plus Shape (NaN if none classified)
+rcnn_l_shape,building typology,0-1,Share predicted L Shape (NaN if none classified)
+rcnn_long_rectangle,building typology,0-1,Share predicted Long Rectangle (NaN if none classified)
+rcnn_private_house_a,building typology,0-1,Share predicted Private House_A (NaN if none classified)
+rcnn_private_house_b,building typology,0-1,Share predicted Private House_B (NaN if none classified)
+rcnn_rectangle_building,building typology,0-1,Share predicted Rectangle Building (NaN if none classified)
+rcnn_u_shape,building typology,0-1,Share predicted U Shape (NaN if none classified)
+rcnn_labelled,building typology,count,Buildings in the block with a predicted building form
+road_border_density,street interface,ratio,Length of cutting streets within 12 m of the block boundary / block perimeter
+road_ped_share,street interface,0-1,Share of that length on pedestrian / footway / living-street ways
+road_frontage_segs,street interface,1/100 m,Street segments along the boundary per 100 m of perimeter
+road_seg_len_mean,street interface,m,Mean length of those segments
+ctx_gsi,context,0-1,Mean GSI of contiguous neighbouring blocks (25 m fuzzy contiguity)
+ctx_fsi,context,ratio,Mean FSI of neighbouring blocks
+ctx_height_mean,context,m,Mean height_mean of neighbouring blocks
+ctx_blg_area_mean,context,m2,Mean blg_area_mean of neighbouring blocks
+ctx_shared_walls_mean,context,0-1,Mean shared_walls_mean of neighbouring blocks
+ctx_blg_density_ha,context,1/ha,Mean blg_density_ha of neighbouring blocks
