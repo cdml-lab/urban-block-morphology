@@ -1,0 +1,8 @@
+outputs/
+study_run/
+examples/example_output*/
+__pycache__/
+*.egg-info/
+.venv/
+*.parquet
+build/

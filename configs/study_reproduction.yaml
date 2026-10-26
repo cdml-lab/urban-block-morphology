@@ -1,0 +1,33 @@
+# Reproduces the manuscript's Track A models from the study inputs in the
+# data package (folder inputs/). Set DATA to the unpacked package, e.g.
+#   blockmorph run configs/study_reproduction.yaml
+# after replacing ../study-results below, or copy this file next to it.
+# Areas are listed in the study's pooling order (A, C, B); the order of
+# rows changes K-means initialisation, so keep it for exact reproduction.
+crs: EPSG:2039            # Israeli TM Grid, as in the study
+descriptors: full57
+output_dir: study_run
+names: ../study-results/names_approved.json
+analysis: {local: true, pooled: true}
+parameters:
+  stability_reps: 100     # as in the study (slow); 20 is the package default
+areas:
+  - id: A
+    name: City A
+    boundary: ../study-results/inputs/A/study_area.gpkg
+    buildings: ../study-results/inputs/A/buildings.gpkg
+    streets: ../study-results/inputs/A/streets.gpkg
+    typology_predictions: ../study-results/inputs/A/typology_predictions.gpkg
+  - id: C
+    name: City C
+    boundary: ../study-results/inputs/C/study_area.gpkg
+    buildings: ../study-results/inputs/C/buildings.gpkg
+    streets: ../study-results/inputs/C/streets.gpkg
+    cut_all_roads: true
+    typology_predictions: ../study-results/inputs/C/typology_predictions.gpkg
+  - id: B
+    name: City B
+    boundary: ../study-results/inputs/B/study_area.gpkg
+    buildings: ../study-results/inputs/B/buildings.gpkg
+    streets: ../study-results/inputs/B/streets.gpkg
+    typology_predictions: ../study-results/inputs/B/typology_predictions.gpkg

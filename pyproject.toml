@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urban-block-morphology"
+version = "1.0.0"
+description = "Urban-block typologies: block delineation, 57 block descriptors, missing-data treatment, whitened PCA, rule-based K selection, K-means, profiles and a results dashboard"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "Author removed for anonymity; will be added after the article is accepted"}]
+dependencies = [
+  "momepy==1.0.0", "libpysal>=4.12", "geopandas>=1.0", "shapely>=2.0", "pyogrio>=0.7",
+  "pyproj>=3.6", "pandas>=2.0", "numpy>=1.26", "scipy>=1.11", "scikit-learn>=1.5",
+  "kneed>=0.8", "osmnx>=2.0", "pyyaml>=6", "pyarrow>=14",
+]
+[project.optional-dependencies]
+test = ["pytest>=7"]
+[project.scripts]
+blockmorph = "blockmorph.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]

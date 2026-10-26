@@ -1,0 +1,17 @@
+# Versions of the study run and of the reproduction (Python 3.13.5, Windows 11).
+# The clean-environment test (verification/repo2_freeze.txt) resolved newer
+# releases (e.g. geopandas 1.2.0) and gave the same K and partitions on the example.
+momepy==1.0.0
+libpysal==4.15.0
+geopandas==1.1.3
+shapely==2.1.2
+pyogrio==0.12.1
+pyproj==3.7.2
+pandas==2.3.3
+numpy==2.4.4
+scipy==1.16.2
+scikit-learn==1.7.2
+kneed==0.8.5
+osmnx==2.1.0
+PyYAML==6.0.3
+pyarrow==24.0.0

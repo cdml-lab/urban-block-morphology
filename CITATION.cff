@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "urban-block-morphology: urban-block typologies from footprints, streets and building-form predictions"
+version: 1.0.0
+date-released: 2026-10-26
+license: MIT
+authors:
+  - name: "Author removed for anonymity; will be added after the article is accepted"
+repository-code: "https://github.com/cdml-lab/urban-block-morphology"
+keywords: [urban morphology, urban blocks, momepy, clustering, typology]
+references:
+  - type: software
+    title: "building-typology-rcnn"
+    version: 1.0.0
+    authors: [{name: "Author removed for anonymity; will be added after the article is accepted"}]
